@@ -38,6 +38,7 @@ const Index:NextPage= () => {
         if(!users)return
         const randomedUser = users.at(Math.random()*users.length)
         if(!randomedUser)return
+
          updatePresenter(randomedUser.idUser,user.idUser)
              .then(x=>{
                 setPresenter(randomedUser)
@@ -89,7 +90,7 @@ const Index:NextPage= () => {
                     {
                         presenter
                             ? <div>
-                                <h3>Бог рандома определил что вы дарите человеку с именем:</h3>
+                                <h3 style={{'textAlign':'center'}}>Бог рандома определил что вы дарите человеку с именем:</h3>
                                 <div className={styles.presenter}>
                                     <div>
                                         {presenter.name}

@@ -27,7 +27,7 @@ export class PresentContext{
     static async getUsersExceptIdAndWithoutPresenter(idUser:number,presenterId:number){
         const result = await executeQuery({
             //query:'SELECT idUser,name,presenterId FROM users WHERE (isnull(presenterId) OR presenterId != ?) AND idUser != ? AND idUser != ?',
-            query:'SELECT idUser,name,phoneNumber FROM users u WHERE (ISNULL(u.presenterId) OR u.presenterId != ?) AND u.idUser != ?',
+            query:'SELECT idUser,name,phoneNumber FROM users u WHERE (ISNULL(u.presenterId) OR u.presenterId != ?) AND u.idUser != ? AND ISNULL((SELECT name FROM users u1 WHERE u1.presenterId = u.idUser))',
             values:[idUser.toString(),idUser.toString()]
         })
         const users = (result as []).map(x=>parseSqltoUser(x))
