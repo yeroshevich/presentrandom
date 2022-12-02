@@ -1,0 +1,66 @@
+@keyframes jumping {
+    0%{
+      transform: translate(-60%,50%);
+    }
+    100%{
+      transform: translate(-60%,60%);
+    }
+}
+.head{
+  color:white;
+}
+@mixin button{
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 10px;
+  border:0;
+  filter: drop-shadow(0 0 10px white);
+  &:hover{
+    cursor: pointer;
+    transition: 2s;
+    background-color: gray;
+  }
+}
+.mainBlock{
+  color:gainsboro;
+  position: relative;
+  .words{
+    text-align: center;
+    min-width: 350px;
+  }
+  .userForm{
+    position: absolute;
+    border:5px solid #fff;
+    border-radius: 50px;
+    padding: 25px;
+    left: 50%;
+    transform: translate(-60%,50%);
+    animation: jumping 3s infinite ease-in-out alternate;
+    .randomButton{
+      text-align: center;
+      button{
+        @include button;
+        padding: 15px;
+
+      }
+    }
+    .logOutBlock{
+      position: absolute;
+      right: 15px;
+      top:15px;
+      button{
+        @include button;
+      }
+    }
+    .rules{
+      font-size: 15pt;
+      &  ul{
+        list-style: none;
+      }
+    }
+    .presenter{
+        font-size: 16pt;
+      text-align: center;
+    }
+  }
+}

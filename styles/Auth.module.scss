@@ -1,0 +1,50 @@
+.block{
+  position: relative;
+  .authForm{
+    position: absolute;
+    left:50%;
+    border:5px solid white;
+    border-radius: 10%;
+    padding: 50px;
+    height: 350px;
+    transform: translate(-50%,30%);
+    .label{
+      font-size: 25pt;
+      text-align: center;
+      filter:drop-shadow(0 0 10px white);
+    }
+    .form{
+      text-align: center;
+      .inputLabel{
+        color:white;
+      }
+      input{
+        text-align: center;
+        height: 25px;
+        border-radius: 50px;
+        padding: 10px;
+        width: 100%;
+        margin:10px 0px;
+        font-size: 15pt;
+        font-weight: bold;
+        &::placeholder{
+          text-align: center;
+        }
+      }
+      button{
+        padding: 15px;
+        font-weight: bold;
+        border-radius: 5px;
+        border:0;
+        width: 150px;
+        margin-top: 15px;
+        &:hover{
+          cursor: pointer;
+          font-size: 15pt;
+          transition: 1s;
+          transform: translateY(5px);
+        }
+      }
+    }
+  }
+}
