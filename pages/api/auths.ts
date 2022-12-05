@@ -23,7 +23,7 @@ export default function handler(
 }
 
 
-const handleGet = async (req: NextApiRequest, res: NextApiResponse<User | null>)=>{
+const handleGet = async (req: NextApiRequest, res: NextApiResponse<User | undefined>)=>{
     const body = {phoneNumber:req.query['phoneNumber'],password:req.query['password']} as UserRequest
     const user =  await PresentContext.login(body)
     res.status(200).json(user)

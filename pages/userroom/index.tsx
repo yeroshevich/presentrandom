@@ -38,7 +38,6 @@ const Index:NextPage= () => {
         if(!users)return
         const randomedUser = users.at(Math.random()*users.length)
         if(!randomedUser)return
-
          updatePresenter(randomedUser.idUser,user.idUser)
              .then(x=>{
                 setPresenter(randomedUser)

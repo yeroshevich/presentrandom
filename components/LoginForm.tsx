@@ -9,6 +9,7 @@ import {useUser} from "../hook/useUser";
 import {useEffect} from "react";
 import {User} from "../model/user";
 
+
 const LoginForm = () => {
     const redirect = useRedirect()
     const {saveUser,isAutorized} = useUser()
@@ -19,10 +20,13 @@ const LoginForm = () => {
         const tempUser = await axios.get('/api/auths',{params:{phoneNumber:phoneInput.value?.slice(1),password:passInput.value}})
         const user = tempUser.data as User
 
-        if(!isAutorized(user)) return
-
+        if(!isAutorized(user)){
+            alert('User not found')
+            return
+        }
         saveUser(user)
         redirect("/userroom")
+
      }
     useEffect(()=>{
         if(localStorage.getItem('user') != undefined)

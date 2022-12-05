@@ -8,7 +8,7 @@ const nextConfig = {
     'MYSQL_DATABASE': 'presentrandom',
     'MYSQL_USER': 'root',
     'MYSQL_PASSWORD': 'root',
-  }
+  },
 }
 
 module.exports = nextConfig
