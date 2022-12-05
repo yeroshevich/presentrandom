@@ -1,10 +1,13 @@
 
 import SnowLayout from "../components/SnowLayout";
 import LoginForm from "../components/LoginForm";
-export default function Home() {
+import React, {memo} from "react";
+
+const Home = () =>{
     return (
         <SnowLayout>
             <LoginForm></LoginForm>
         </SnowLayout>
     )
 }
+export default React.memo(Home)

@@ -1,0 +1,36 @@
+$size: 350px;
+.form{
+  z-index: 1;
+  transition: 2s;
+  width: $size;
+  height: $size;
+  background-color: black;
+  position: absolute;
+  border:5px solid #fff;
+  border-radius: 25%;
+
+   & .innerContainer{
+     color:white;
+     position: relative;
+       & button{
+         position: absolute;
+         top:40px;
+         padding: 15px;
+         border-radius: 50%;
+         background-color: #fff;
+         &:hover{
+           cursor: pointer;
+           transform: translateY(-5px);
+           transition: 1s;
+         }
+       }
+     .text{
+       width: calc($size - 150px);
+       position: absolute;
+       top:150px;
+       left: 75px;
+       text-align: center;
+       font-size: 18pt;
+     }
+   }
+}

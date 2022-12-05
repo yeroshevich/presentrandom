@@ -1,0 +1,36 @@
+.form {
+  z-index: 1;
+  transition: 2s;
+  width: 350px;
+  height: 350px;
+  background-color: black;
+  position: absolute;
+  border: 5px solid #fff;
+  border-radius: 25%;
+}
+.form .innerContainer {
+  color: white;
+  position: relative;
+}
+.form .innerContainer button {
+  position: absolute;
+  top: 40px;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.form .innerContainer button:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  transition: 1s;
+}
+.form .innerContainer .text {
+  width: 200px;
+  position: absolute;
+  top: 150px;
+  left: 75px;
+  text-align: center;
+  font-size: 18pt;
+}
+
+/*# sourceMappingURL=Modal.module.css.map */
