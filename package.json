@@ -9,12 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/crypto-js": "^4.1.1",
     "@types/node": "18.11.10",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
     "axios": "^1.2.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "crypto-js": "^4.1.1",
     "eslint": "8.22.0",
     "eslint-config-next": "13.0.5",
+    "ncrypt-js": "^2.0.0",
     "next": "13.0.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
