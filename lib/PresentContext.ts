@@ -19,7 +19,6 @@ export class PresentContext{
             if(x.phoneNumber.slice(1,x.phoneNumber.length-1) === user.phoneNumber  && x.password.slice(1,x.password.length-1) === user.password)
                 return x
         }).at(0)
-        users.map(x=>console.log(`Имя: ${x.name}`+" | телефон:"+ x.phoneNumber.slice(1,x.phoneNumber.length-1) +" | пароль:" + x.password.slice(1,x.password.length-1)) )
         return findedUser? findedUser:null
     }
     static async getUserById(id:number)
